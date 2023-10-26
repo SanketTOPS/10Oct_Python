@@ -1,6 +1,4 @@
 print('Hello Python!')
-print("Hello Python!")
-print('''Hello Python!
-      trejwitjreijtyoiejiy
-      jtioeroytroeipiyopiwpoyit
-      jutoeriioieopytipoe''')
+print("Hello Students!")
+print('''Good Morning!
+      Welcome with Python!''')
