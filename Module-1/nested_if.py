@@ -20,6 +20,7 @@ if s1>=40 and s2>=40 and s3>=40 and s4>=40: #root (parent)
         print("Result:B")
     elif pr>=40: #child
         print("Result:C")
+        
 else:
     print("Result:FAIL")
 
