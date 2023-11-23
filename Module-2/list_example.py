@@ -1,4 +1,4 @@
-data=['c++','python','php','java','node']
+data=['c++','python','php','java','node'] #static
 
 #print(data)
 """print(data[0])
@@ -14,7 +14,7 @@ print(data)"""
 
 # ----------------------------------------- #
 
-print(data)
+#print(data)
 
 """if 'Python' in data:
     print("Yes...")
@@ -34,7 +34,34 @@ else:
     #print(i,"=",data.index(i))
     print(f"{i}={data.index(i)}")"""
 
-n=0
+"""n=0
 for i in data:
     print(f"{i}={n}")
-    n+=1
+    n+=1"""
+
+# ----------------------------------------- #
+print(data)
+
+#data.append("html")
+#data.insert(2,'angular')
+#data.remove('php')
+#data.pop()
+#data.pop(0)
+#data.clear()
+#del data[1]
+#del data
+#data.reverse()
+#data.sort()
+#print(data)
+
+
+#newdata=data.copy()
+#print(newdata)
+
+newdata=["A","B","C","D","E"]
+print(newdata)
+
+#print(data+newdata)
+
+data.extend(newdata)
+print(data)
