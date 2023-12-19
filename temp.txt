@@ -1,6 +1,0 @@
-ID:101
-Name:Sanket
-ID:102
-Name:Mitesh
-ID:103
-Name:Hitesh
