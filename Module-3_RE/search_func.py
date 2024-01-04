@@ -2,8 +2,8 @@ import re
 
 mystr="This is Python!"
 
-#x=re.search('python',mystr)
-x=re.search('Is',mystr)
+x=re.search('This',mystr)
+#x=re.search('Is',mystr)
 print(x)
 
 
