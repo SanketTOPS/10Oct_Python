@@ -7,7 +7,6 @@ except Exception as e:
     print(e)
 
 #Table Create
-    
 tbl_create="create table studinfo(id integer primary key autoincrement,name text,city text)"
 try:
     db.execute(tbl_create)
