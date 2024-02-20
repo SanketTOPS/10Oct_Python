@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import *
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -11,3 +12,7 @@ def index(request):
         else:
             print(newdata.errors)
     return render(request,'index.html')
+
+def showdata(request):
+    stdata=studinfo.objects.all()
+    return render(request,'showdata.html',{'stdata':stdata})
