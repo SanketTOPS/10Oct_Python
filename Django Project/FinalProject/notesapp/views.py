@@ -23,9 +23,12 @@ def index(request):
             pas=request.POST['password']
 
             user=usersignup.objects.filter(username=unm,password=pas)
+            username=usersignup.objects.get(username=unm)
+            print("Username:",username.id)
             if user: #TRUE
                 print("Login Successfull!")
                 request.session['user']=unm
+                request.session['userid']=username.id
                 return redirect('notes')
             else:
                 print("Error!Login Faild...")
@@ -39,7 +42,20 @@ def contact(request):
     return render(request,'contact.html')
 
 def profile(request):
-    return render(request,'profile.html')
+    user=request.session.get('user')
+    userid=request.session.get('userid')
+    cuser=usersignup.objects.get(id=userid)
+    if request.method=='POST':
+            newuser=signupForm(request.POST,instance=cuser)
+            if newuser.is_valid():
+                newuser.save()
+                print("Update Successfully!")
+                msg="Update Successfully!"
+                return redirect('notes')
+            else:
+                print(newuser.errors)
+                msg="Error!Something went wrong...Try again"
+    return render(request,'profile.html',{'user':user,'cuser':cuser})
 
 def notes(request):
     user=request.session.get('user')
