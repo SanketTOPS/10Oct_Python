@@ -67,7 +67,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/profile">Update Profile</a></li>
                         <li><a class="dropdown-item" href="/userlogout">Logout</a></li>
-                       
+
                     </ul>
                 </div>
                 {% endif %}
@@ -195,6 +195,39 @@
         </div>
     </div>
     <!-- Signup Modal End -->
+
+    <!-- Notes Form Start -->
+    <div class="container my-5">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Query Title</label>
+                <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Select your tech. option</label>
+                <select class="form-select" name="tech_option" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option>Core Python</option>
+                    <option>Advance Python</option>
+                    <option>PHP</option>
+                    <option>JAVA</option>
+                    <option>Android/iOS</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="formFileLg" class="form-label">Select your file's</label>
+                <input class="form-control form-control-lg" name="myfile" id="formFileLg" type="file">
+            </div>
+            <div class="mb-3 my-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descriptions</label>
+                <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Submit Notes!</button>
+        </form>
+    </div>
+    <!-- Notes Form End -->
 
 
 </body>
